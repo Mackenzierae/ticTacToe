@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					5983864B1DF0BA6A00F8654D = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8H997XH52S;
 						ProvisioningStyle = Automatic;
 					};
 					5983865F1DF0BA6B00F8654D = {
@@ -412,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8H997XH52S;
 				INFOPLIST_FILE = ticTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingdojo.ticTacToe;
@@ -424,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8H997XH52S;
 				INFOPLIST_FILE = ticTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingdojo.ticTacToe;
@@ -505,6 +508,7 @@
 				598386761DF0BA6B00F8654D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		598386771DF0BA6B00F8654D /* Build configuration list for PBXNativeTarget "ticTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +517,7 @@
 				598386791DF0BA6B00F8654D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5983867A1DF0BA6B00F8654D /* Build configuration list for PBXNativeTarget "ticTacToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				5983867C1DF0BA6B00F8654D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

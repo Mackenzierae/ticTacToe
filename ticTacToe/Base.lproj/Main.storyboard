@@ -23,7 +23,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3F-5Z-K5Y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.83657962328767121" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.045504138007897918" green="0.13555053138864417" blue="0.57488495111465454" alpha="0.83657962328767121" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="VYt-t4-PZi"/>
                                 </constraints>
@@ -33,12 +33,12 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-WH-JXd">
                                 <rect key="frame" x="0.0" y="462" width="375" height="100"/>
-                                <color key="backgroundColor" red="0.5155959054" green="0.91122394799999995" blue="0.31880060329999999" alpha="0.83390410958904104" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.51372549019607838" green="0.90980392156862744" blue="0.31764705882352939" alpha="0.83390410958904104" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="8kW-kT-Yz7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.069642476913387527" green="0.31486247790041311" blue="0.030338743744897742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.070588235294117646" green="0.31372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgD-e4-y4W">
@@ -177,6 +177,7 @@
                         <outlet property="eightButton" destination="hCb-X6-seM" id="BSb-1v-7tJ"/>
                         <outlet property="fiveButton" destination="nz9-KU-Mbg" id="lHB-Df-19U"/>
                         <outlet property="fourButton" destination="hce-i8-rYI" id="gqT-Vl-NOD"/>
+                        <outlet property="mainLabelOutlet" destination="L3F-5Z-K5Y" id="Erl-aS-4SZ"/>
                         <outlet property="nineButton" destination="Cbz-0F-z38" id="Uep-OY-awa"/>
                         <outlet property="oneButton" destination="If9-5C-S1N" id="NLy-CV-fZR"/>
                         <outlet property="sevenButton" destination="6OA-3O-gOo" id="g88-tA-7De"/>

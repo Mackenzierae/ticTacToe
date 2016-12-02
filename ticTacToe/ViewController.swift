@@ -36,13 +36,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var nineButton: UIButton!
     @IBOutlet var buttonOutletCollection: [UIButton]!
     
+    @IBOutlet weak var mainLabelOutlet: UILabel!
     @IBOutlet weak var winnerLabel: UILabel!
 
     var playerOne: [Int] = [Int]()
     var playerTwo: [Int] = [Int]()
-    var winningCombos = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9]]
+    var winningCombos = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5,3]]
 
-    
+    var winnerFlag = false
     var turnCount: Int = 2
  
     @IBAction func anyButtonPressedFunction(_ sender: UIButton) {
@@ -55,31 +56,38 @@ class ViewController: UIViewController {
             sender.isEnabled = false
             playerOne.append(sender.tag)
             
-            //if playerOne.count == 5  then tie game. else do as follows:
-            
-            outerloop: for i in 0...6 {
-              var winningCount: Int = 0
-                innerloop: for j in 0...2 {
-                    if playerOne.contains(winningCombos[i][j]) {
-                        winningCount += 1
-                        print("*****\(winningCount)*****")
-                        if winningCount == 3 {
-                            //WINNER!
-                            self.winnerLabel.text = "Player One Wins!!!"
-                            self.winnerLabel.isHidden = false
-                            for button in self.buttonOutletCollection {
-                                button.isEnabled = false
+                outerloop: for i in 0...7 {
+                    var winningCount: Int = 0
+                    innerloop: for j in 0...2 {
+                        if playerOne.contains(winningCombos[i][j]) {
+                            winningCount += 1
+                            print("*****\(winningCount)*****")
+                            if winningCount == 3 {
+                                //WINNER!
+                                self.winnerFlag = true
+                                self.winnerLabel.text = "Player One Wins!!!"
+                                self.mainLabelOutlet.backgroundColor = self.UIColorFromRGB(0xE5287F)
+                                self.winnerLabel.isHidden = false
+                                for button in self.buttonOutletCollection {
+                                    button.isEnabled = false
+                                }
                             }
                         }
-                    }
-                    else {
-                        break innerloop
+                        else {
+                            break innerloop
+                        }
                     }
                 }
+                
+                turnCount += 1
+                print(playerOne)
+
+            if self.playerOne.count == 5 && self.winnerFlag == false {
+                self.winnerLabel.text = "Super Lame."
+                self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x264BA0)
+                self.winnerLabel.textColor = UIColor.white
+                self.winnerLabel.isHidden = false
             }
-            
-            turnCount += 1
-            print(playerOne)
         }
         //PLAYER TWO
         else {
@@ -88,7 +96,7 @@ class ViewController: UIViewController {
             sender.isEnabled = false
             playerTwo.append(sender.tag)
 
-            outerloop: for i in 0...6 {
+            outerloop: for i in 0...7 {
                 var winningCount: Int = 0
                 innerloop: for j in 0...2 {
                     if playerTwo.contains(winningCombos[i][j]) {
@@ -96,6 +104,7 @@ class ViewController: UIViewController {
                         if winningCount == 3 {
                             //WINNER!
                             self.winnerLabel.text = "Player Two Wins!!!"
+                            self.mainLabelOutlet.backgroundColor = self.UIColorFromRGB(0xFFDB46)
                             self.winnerLabel.isHidden = false
                             for button in self.buttonOutletCollection {
                                 button.isEnabled = false
@@ -114,10 +123,7 @@ class ViewController: UIViewController {
         
     }
     
-    
-    //WINNING FUNCTION ... ?
-    
-    
+    //RESET BUTTON
     @IBAction func resetButtonPressed(_ sender: Any) {
         reset()
     }
@@ -129,10 +135,14 @@ class ViewController: UIViewController {
             element.backgroundColor = self.UIColorFromRGB(0x61E9E7)
             element.isEnabled = true
         }
+        self.mainLabelOutlet.backgroundColor = self.UIColorFromRGB(0x264BA0)
+        self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x91EA7C)
+        self.winnerLabel.textColor = self.UIColorFromRGB(0x1D6925)
         self.winnerLabel.isHidden = true
         self.turnCount = 2
         self.playerOne = []
         self.playerTwo = []
+        self.winnerFlag = false
     }
     
     
