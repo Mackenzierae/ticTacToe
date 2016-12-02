@@ -67,6 +67,9 @@ class ViewController: UIViewController {
                             //WINNER!
                             self.winnerLabel.text = "Player One Wins!!!"
                             self.winnerLabel.isHidden = false
+                            for button in self.buttonOutletCollection {
+                                button.isEnabled = false
+                            }
                         }
                     }
                     else {
@@ -94,6 +97,9 @@ class ViewController: UIViewController {
                             //WINNER!
                             self.winnerLabel.text = "Player Two Wins!!!"
                             self.winnerLabel.isHidden = false
+                            for button in self.buttonOutletCollection {
+                                button.isEnabled = false
+                            }
                         }
                     }
                     else {
@@ -112,14 +118,21 @@ class ViewController: UIViewController {
     //WINNING FUNCTION ... ?
     
     
+    @IBAction func resetButtonPressed(_ sender: Any) {
+        reset()
+    }
+    
     
     //RESET FUNCTION
     func reset() {
         for element in self.buttonOutletCollection {
             element.backgroundColor = self.UIColorFromRGB(0x61E9E7)
+            element.isEnabled = true
         }
         self.winnerLabel.isHidden = true
         self.turnCount = 2
+        self.playerOne = []
+        self.playerTwo = []
     }
     
     
