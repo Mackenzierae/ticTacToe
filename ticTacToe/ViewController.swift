@@ -17,7 +17,10 @@ class ViewController: UIViewController {
         for element in self.buttonOutletCollection {
             element.backgroundColor = self.UIColorFromRGB(0x61E9E7)
         }
-        self.winnerLabel.isHidden = true
+        
+//        self.winnerLabel.isHidden = true
+        self.winnerLabel.text = ""
+        self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x224390)
     }
     //OVERRIDE DEFAULT
     override func didReceiveMemoryWarning() {
@@ -66,6 +69,7 @@ class ViewController: UIViewController {
                                 //WINNER!
                                 self.winnerFlag = true
                                 self.winnerLabel.text = "Player One Wins!!!"
+                                self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x82D26F)
                                 self.mainLabelOutlet.backgroundColor = self.UIColorFromRGB(0xE5287F)
                                 self.winnerLabel.isHidden = false
                                 for button in self.buttonOutletCollection {
@@ -104,6 +108,7 @@ class ViewController: UIViewController {
                         if winningCount == 3 {
                             //WINNER!
                             self.winnerLabel.text = "Player Two Wins!!!"
+                            self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x82D26F)
                             self.mainLabelOutlet.backgroundColor = self.UIColorFromRGB(0xFFDB46)
                             self.winnerLabel.isHidden = false
                             for button in self.buttonOutletCollection {
@@ -138,7 +143,9 @@ class ViewController: UIViewController {
         self.mainLabelOutlet.backgroundColor = self.UIColorFromRGB(0x264BA0)
         self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x91EA7C)
         self.winnerLabel.textColor = self.UIColorFromRGB(0x1D6925)
-        self.winnerLabel.isHidden = true
+//        self.winnerLabel.isHidden = true
+        self.winnerLabel.text = ""
+        self.winnerLabel.backgroundColor = self.UIColorFromRGB(0x224390)
         self.turnCount = 2
         self.playerOne = []
         self.playerTwo = []
